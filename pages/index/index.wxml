@@ -1,0 +1,103 @@
+<!--index.wxml-->
+<!-- 搜索框开始 -->
+<searchInput></searchInput>
+<!-- 搜索框结束 -->
+<!-- 轮播 开始-->
+<view id="swiper">
+	<swiper autoplay interval="2000" circular current indicator-dots>
+		<swiper-item wx:for="{{banner}}" wx:key="index">
+			<image mode="widthFix" src="{{item.img}}"></image>
+		</swiper-item>
+	</swiper>
+</view>
+<!-- 轮播 结束-->
+<!-- 导航开始 -->
+<!-- navigator不能跳转TabBar -->
+<view id="nav">
+	<view class="item" wx:for="{{nav}}" wx:key='id'  bindtap="particulars1" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+		<image src="{{item.img}}" style="background-color:{{item.background}};"></image>
+		<navigator url="">{{item.name}}</navigator>
+	</view>
+</view>
+<!-- 导航结束 -->
+<!-- 热销爆款开始 -->
+<view class="bao">热销爆款</view>
+<view id="hot">
+	<navigator class="hot-item" wx:for="{{hot}}" wx:key="index"  bindtap="particulars2" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}" >
+		<image class="img" src="{{item.img}}"></image>
+     <view class="text">
+		   <view class="name">{{item.name}}</view>
+       <view class="price">￥￥{{item.newprice}}</view>
+		 </view>
+	</navigator>
+</view>
+<!-- 热销爆款结束 -->
+<!-- 爱情花开始 -->
+<view id="love-top">
+<text>爱情鲜花</text>
+<navigator>更多>></navigator>
+</view >
+<view id="love">
+ <navigator class="love-item"wx:for="{{love}}" wx:key="id" bindtap="particulars3" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+  <image class="img" src="{{item.img}}" ></image>
+<view class="text">
+	<text class="name">{{item.name}}</text>
+	<view class="price">￥{{item.newprice}}</view>
+</view>
+ </navigator>
+ </view>
+
+<!-- 爱情花结束 -->
+
+<!-- 开业花篮开始 -->
+<view id="love-top">
+<text>开业花篮预定</text>
+<navigator>更多>></navigator>
+</view >
+<view id="love">
+ <navigator class="love-item"wx:for="{{basket}}" wx:key="id"  bindtap="particulars4" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+  <image class="img" src="{{item.img}}" ></image>
+<view class="text">
+	<text class="name">{{item.name}}</text>
+	<view class="price">￥{{item.newprice}}</view>
+</view>
+ </navigator>
+ </view>
+<!--开业花篮结束 -->
+
+<!-- 精品礼盒开始 -->
+<view id="love-top">
+<text>精品礼盒</text>
+<navigator>更多>></navigator>
+</view >
+<view id="love">
+ <navigator class="love-item"wx:for="{{boxes}}" wx:key="id"  bindtap="particulars5" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+  <image class="img" src="{{item.img}}" ></image>
+<view class="text">
+	<text class="name">{{item.name}}</text>
+	<view class="price">￥{{item.newprice}}</view>
+</view>
+ </navigator>
+ </view>
+<!--精品礼盒结束 -->
+
+<!-- 精美蛋糕开始 -->
+<view id="love-top">
+<text>精美蛋糕</text>
+<navigator>更多>></navigator>
+</view >
+<view id="love">
+ <navigator class="love-item"wx:for="{{cake}}" wx:key="id"  bindtap="particulars6" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+  <image class="img" src="{{item.img}}" ></image>
+<view class="text">
+	<text class="name">{{item.name}}</text>
+	<view class="price">￥{{item.newprice}}</view>
+</view>
+ </navigator>
+ </view>
+<!--精美蛋糕结束 -->
+<!-- 到底了开始 -->
+<view class="wan">
+到底了......
+</view>
+<!-- 到底了结束 -->

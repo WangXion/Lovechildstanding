@@ -1,0 +1,51 @@
+.classify {
+  width: 100%;
+  display: flex;
+}
+.classify .left {
+  flex: 2;
+}
+.classify .left .left-item {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  font-size: 30rpx;
+}
+.classify .left .active {
+  color: #fe5722;
+  border-left: 3px solid currentColor;
+}
+.classify .right {
+  flex: 8;
+}
+.classify .right .love {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.classify .right .love .love-item {
+  width: 48%;
+  margin-left: 10rpx;
+  box-shadow: 1px 4px 4px #888888;
+  border-radius: 5px;
+  margin-bottom: 20rpx;
+}
+.classify .right .love .love-item .img {
+  width: 100%;
+  height: 350rpx;
+}
+.classify .right .love .love-item .text {
+  margin-left: 5rpx;
+}
+.classify .right .love .love-item .text .name {
+  padding: 5px;
+  height: 28px;
+  overflow: hidden;
+}
+.classify .right .love .love-item .text .price {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #fe5722;
+}

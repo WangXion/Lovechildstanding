@@ -1,0 +1,79 @@
+<!--pages/classify/classify.wxml-->
+<!--index.wxml-->
+<!-- 搜索框开始 -->
+<searchInput></searchInput>
+<!-- 搜索框结束 -->
+<view class="classify">
+<!-- 左侧菜单开始 -->
+<scroll-view scroll-y class="left">
+<view  
+class="left-item  {{index===currentIndex?'active':''}}" 
+wx:for='{{left}}' 
+wx:key='index'
+bindtap="handleItemTap"
+data-index="{{index}}"
+>{{item}}</view>
+</scroll-view>
+<!-- 左侧菜单结束 -->
+
+<!-- 右侧内容开始 -->
+<scroll-view class="right">
+<!-- 鲜花开始 -->
+<view class="love" wx:if="{{currentIndex==0?true:false}}">
+ <navigator class="love-item"wx:for="{{flower}}" wx:key="id"  bindtap="particulars" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+  <image class="img" src="{{item.img}}"  mode="widthFix"></image>
+<view class="text">
+	<text class="name">{{item.name}}</text>
+	<view class="price">￥{{item.newprice}}</view>
+</view>
+ </navigator>
+ </view>
+<!--鲜花结束 -->
+<!-- 花盒开始 -->
+<view class="love" wx:if="{{currentIndex==1?true:false}}">
+ <navigator class="love-item"wx:for="{{fireworks}}" wx:key="id"  bindtap="particulars1" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+  <image class="img" src="{{item.img}}"  mode="widthFix"></image>
+<view class="text">
+	<text class="name">{{item.name}}</text>
+	<view class="price">￥{{item.newprice}}</view>
+</view>
+ </navigator>
+ </view>
+<!--花盒结束 -->
+<!-- 蛋糕开始 -->
+<view class="love" wx:if="{{currentIndex==2?true:false}}">
+ <navigator class="love-item"wx:for="{{cakes}}" wx:key="id"  bindtap="particulars2" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+  <image class="img" src="{{item.img}}"  mode="widthFix"></image>
+<view class="text">
+	<text class="name">{{item.name}}</text>
+	<view class="price">￥{{item.newprice}}</view>
+</view>
+ </navigator>
+ </view>
+<!--蛋糕结束 -->
+<!-- 花篮开始 -->
+<view class="love" wx:if="{{currentIndex==3?true:false}}">
+ <navigator class="love-item"wx:for="{{baskets}}" wx:key="id"  bindtap="particulars3" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+  <image class="img" src="{{item.img}}"  mode="widthFix"></image>
+<view class="text">
+	<text class="name">{{item.name}}</text>
+	<view class="price">￥{{item.newprice}}</view>
+</view>
+ </navigator>
+ </view>
+<!--花篮结束 -->
+<!-- 绿植花卉开始 -->
+<view class="love" wx:if="{{currentIndex==4?true:false}}">
+ <navigator class="love-item"wx:for="{{plants}}" wx:key="id"  bindtap="particulars4" data-id="{{item.id}}" url="/pages/details/details?good_id={{item.id}}">
+  <image class="img" src="{{item.img}}"  mode="widthFix"></image>
+<view class="text">
+	<text class="name">{{item.name}}</text>
+	<view class="price">￥{{item.newprice}}</view>
+</view>
+ </navigator>
+ </view>
+<!--绿植花卉结束 -->
+
+</scroll-view>
+<!-- 右侧内容结束 -->
+</view>

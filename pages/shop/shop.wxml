@@ -1,0 +1,64 @@
+<!--pages/shop/shop.wxml-->
+<!--index.wxml-->
+
+<!-- <view>购物车</view> -->
+<!-- <input type="text" bindinput="handleInput" />
+<button bindtap="handletap" data-operation="{{-1}}">-</button>
+<button  bindtap="handletap" data-operation="{{1}}">+</button>
+<view>{{num}}</view> -->
+
+
+<!-- 有商品 开始 -->
+<view id="shop" wx:if="{{cart.length!==0}}">
+	<view class="shop-item" wx:for="{{cart}}" wx:key="index">
+		<view class="img">
+			<image src="{{item.img}}"></image>
+		</view>
+		<view class="shuju">
+			<view class="left">
+				<view class="name">{{item.name}}</view>
+			 <checkbox-group bindtap="handleItemChange" data-id="{{item.id}}">
+			    	<checkbox class="checked" checked="{{item.istrue}}"></checkbox>
+			 </checkbox-group>
+			</view>
+			<view class="logo">{{item.logo}}</view>
+			<view class="right">
+				<view class="price">{{item.newprice}}</view>
+				<button bindtap="handleEdit" data-id="{{item.id}}" data-operation="{{-1}}" >-</button>
+		   	<text class="input">{{item.count}}</text>
+				<button bindtap="handleEdit"  data-id="{{item.id}}" data-operation="{{1}}">+</button>
+			</view>
+		</view>
+
+	</view>
+	<view id="zong">
+		<view class="checkAll">
+			<view class="checkAll-item">
+				<checkbox-group bindtap="handleItemAllcheck">
+				<checkbox checked="{{item.istrue}}"  checked="{{allchecked}}">全选</checkbox>
+				</checkbox-group>
+			</view>
+			<view class="calculate">
+				<view class="shu"><text>共计:￥</text><text class="price">{{totalPrice}}</text>元</view>
+				<button class="button">去结算{{totalNum}}</button>
+			</view>
+
+		</view>
+
+	</view>
+</view>
+<!-- 有商品 结束 -->
+
+
+<!-- 没有商品时候显示 开始 -->
+<view id="noShop">
+<view class="noShop-item" wx:if="{{cart.length==0}}">
+<view class="icon-group">
+  <icon type="info" size="90"></icon>
+</view>
+<view class="wu">暂无商品</view>
+<view class="xuan">购物车暂无任何商品，马上去选购一件吧！</view>
+<navigator url="/pages/index/index"  open-type="switchTab">返回首页</navigator>
+</view>
+</view>
+<!-- 没有商品时候显示 结束 -->

@@ -1,0 +1,87 @@
+<!-- 轮播 开始-->
+<view id="swiper">
+	<swiper autoplay interval="2000" circular  indicator-dots>
+		<swiper-item wx:for="{{banner[0].banner}}" wx:key="index">
+			<image mode="widthFix" src="{{item}}" mode="widthFix"></image>
+		</swiper-item>
+	</swiper>
+</view>
+<!-- 轮播 结束-->
+<!-- 内容开始 -->
+<view id="shuzhi" wx:for="{{banner}}" wx:key="index">
+<view class="name">{{item.name}}</view>
+<view class="money">
+<text class="price">
+<text class="newprice">{{item.newprice}}</text>
+<text class="oldprice">{{item.oldprice}}</text>
+</text>
+ <text class="work">{{item.work}}</text>
+</view>
+</view>
+<!-- 内容结束 -->
+<!-- 质量保证开始 -->
+<view id="icon">
+<view class="icon-group">
+  <icon type="success" size="20"></icon>
+  品质保障
+</view>
+<view class="icon-group">
+  <icon type="success" size="20"></icon>
+  市区免费配送
+</view>
+<view class="icon-group">
+  <icon type="success" size="20"></icon>
+  2小时送达
+</view>
+</view>
+<!-- 质量保证结束 -->
+
+<!-- 新价格老价格开始 -->
+<view class="chajia" >
+<view wx:for="{{banner}}" wx:key="index">
+<text class="yuanjia" >原价：</text><text class="yuanjia1">{{item.newprice}}</text>
+<text  class="youhui">优惠价：</text><text class="youhui1">{{item.oldprice}}</text>
+</view>
+</view>
+<!-- 新价格老价格结束 -->
+<!-- 花语开始 -->
+<view class="flower" wx:for="{{banner}}" wx:key="index">
+<view class="xijie"><text class="xijie2">花语:</text><text class="miaoshu">{{item.flower}}</text></view>
+<view class="xijie"><text class="xijie2">花材:</text><text class="miaoshu">{{item.expenditure}}</text></view>
+<view class="xijie"><text class="xijie2">配送:</text><text class="miaoshu">本地区各市县、街道（市区内免费配送）</text ></view>
+<view class="xijie"><text class="xijie2">赠送:</text><text class="miaoshu">下单填写留言，即免费赠送精美贺卡！</text></view>
+</view>
+<!-- 花语结束 -->
+<!-- 详细介绍开始 -->
+<view class="page">
+详细介绍
+ <image wx:for="{{banner[0].details}}" src="{{item}}" wx:key="index" mode="widthFix"></image>
+ <!-- //mode="widthFix"高度随宽变化 -->
+ 
+
+</view>
+<!-- 详细介绍结束 -->
+
+<!-- 购买开始 -->
+<view class="shop">
+<view class="shop-item">
+<view class="shouye">
+<icon class="iconfont  icon-yemian-copy-copy"></icon>
+<navigator url="/pages/index/index" open-type="switchTab">首页</navigator>
+</view>
+<view class="gouwu">
+<icon class="iconfont  icon-gouwuche"></icon>
+<text>加入购物车</text>
+</view>
+<view class="kefu">
+<icon class="iconfont  icon-erji"></icon>
+<text>客服</text>
+</view>
+</view>
+<view class="shop-button">
+<button bindtap="handleCartAdd">加入购物车</button>
+<button><navigator url="/pages/shop/shop"  open-type="switchTab">立即购买</navigator></button>
+</view>
+</view>
+
+<!-- 购买结束 -->

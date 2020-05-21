@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/shop/shop",
+    "pages/classify/classify",
+    "pages/user/user",
+    "pages/details/details",
+    "pages/search/search",
+    "pages/logs/logs",
+    "pages/login/login"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#DDA0DD",
+    "navigationBarTitleText": "鲜花优购",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+    "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/icons/home.png",
+      "selectedIconPath": "images/icons/home-active.png"
+    },
+    {
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "images/icons/category.png",
+      "selectedIconPath": "images/icons/category-active.png"
+    },
+    {
+      "pagePath": "pages/shop/shop",
+      "text": "购物车",
+      "iconPath": "images/icons/cart.png",
+      "selectedIconPath": "images/icons/cart-active.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "images/icons/my.png",
+      "selectedIconPath": "images/icons/my-active.png"
+    }
+    
+  ],
+"selectedColor": "#E56858"
+  
+
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

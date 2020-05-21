@@ -1,0 +1,125 @@
+page{
+    background-color: #edece8;
+}
+.user{
+    height: 45vh;
+    background-color: #DDA0DD;
+    .user_item{
+        position: relative;
+        .user_bg{
+            height: 50vh;
+            //高斯模糊
+            filter: blur(10rpx);
+        }
+        .user_info{
+            position: absolute;
+            left: 50%;
+             transform: translateX(-50%);
+             top:20%;
+             text-align: center;
+             .user_icon{
+                 width:150rpx;
+                 height: 150rpx;
+                 border-radius: 50%;
+             }
+             .user_name{
+              color: grey;
+               margin-top: 40rpx;
+             }
+              }
+          
+    }
+    .user_btn{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20%;
+        width: 120rpx;
+        text-align: center;
+        border: 1px solid greenyellow;
+        color: greenyellow;
+        font-size: 38rpx;
+        padding: 20rpx;
+        border-radius: 10rpx;
+    }
+}
+.user_content{
+    position: relative;
+    .user_main{
+        position: absolute;
+        color: #666;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -40rpx;
+        padding-bottom: 100rpx;
+        .history{
+            background-color: #fff;
+            display: flex;
+            navigator{
+             flex:1;
+             text-align: center;
+             padding: 10rpx 0;
+             .his_num{
+                 color: var(--themColor);
+             }
+             .his_name{
+                color:grey;
+                font-size: 24rpx;
+              }
+
+            }
+
+        }
+        .orders{
+            background-color: #fff;
+            margin-top: 30rpx;
+            .orders_title{
+                padding: 20rpx;
+                border-bottom: 1px solid #ccc;
+            }
+            .orders_content{
+                display: flex;
+                navigator{
+                    padding: 15rpx 0;
+                    flex: 1;
+                    text-align: center;
+                    .iconfont{
+                        font-size: 44rpx;
+                        color: sienna;
+                    }
+                    .orders_name{
+                     color: grey;
+                    }
+                }
+              
+            }
+           
+
+        }
+        .addresss{
+            margin-top: 30rpx;
+            background-color:#fff ;
+          
+        }
+        .app_info{
+            margin-top: 30rpx;
+            background-color:#fff ;
+            padding: 20rpx;
+            .contact{
+                display: flex;
+                justify-content: space-between;
+            }
+            .app_info-item{
+                padding: 20rpx;
+                border-bottom: 1px solid #ccc;
+            }
+
+        }
+        .recommend{
+            margin-top: 30rpx;
+            background-color:#fff ;
+            padding: 20rpx;
+        }
+    }
+}

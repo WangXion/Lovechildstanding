@@ -1,0 +1,117 @@
+page {
+  background-color: #edece8;
+}
+.user {
+  height: 45vh;
+  background-color: #DDA0DD;
+}
+.user .user_item {
+  position: relative;
+}
+.user .user_item .user_bg {
+  height: 50vh;
+  width: 100%;
+  filter: blur(10rpx);
+}
+.user .user_item .user_info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user .user_item .user_info .user_icon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user .user_item .user_info .user_name {
+  color: grey;
+  margin-top: 40rpx;
+}
+.user .user_btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  width: 353rpx;
+  text-align: center;
+  color: greenyellow;
+  font-size: 38rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+.user_content {
+  position: relative;
+}
+.user_content .user_main {
+  position: absolute;
+  color: #666;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+  padding-bottom: 100rpx;
+}
+.user_content .user_main .history {
+  background-color: #fff;
+  display: flex;
+}
+.user_content .user_main .history navigator {
+  flex: 1;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.user_content .user_main .history navigator .his_num {
+  color: var(--themColor);
+}
+.user_content .user_main .history navigator .his_name {
+  color: grey;
+  font-size: 24rpx;
+}
+.user_content .user_main .orders {
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+.user_content .user_main .orders .orders_title {
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+.user_content .user_main .orders .orders_content {
+  display: flex;
+}
+.user_content .user_main .orders .orders_content navigator {
+  padding: 15rpx 0;
+  flex: 1;
+  text-align: center;
+}
+.user_content .user_main .orders .orders_content navigator .iconfont {
+  font-size: 44rpx;
+  color: sienna;
+}
+.user_content .user_main .orders .orders_content navigator .orders_name {
+  color: grey;
+}
+.user_content .user_main .addresss {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 15rpx;
+}
+.user_content .user_main .app_info {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.user_content .user_main .app_info .contact {
+  display: flex;
+  justify-content: space-between;
+}
+.user_content .user_main .app_info .app_info-item {
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+.user_content .user_main .recommend {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
